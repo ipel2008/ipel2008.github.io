@@ -8,12 +8,15 @@
   }
   100% {
     opacity: 1;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 .jumbotron {
   padding-top: 6rem;
   background-color: rgba(92, 204, 64, 0.623);
+}
+.jumbotron svg {
+  height: 40vw;
 }
 .rounded-circle {
   border: 5px solid green;
