@@ -16,7 +16,13 @@
   background-color: rgba(92, 204, 64, 0.623);
 }
 .jumbotron svg {
-  height: 40vw;
+  height: calc(50ch - 8vmax);
+}
+#about svg {
+  height: calc(50ch - 8vmax);
+}
+#projects svg {
+  height: calc(50ch - 8vmax);
 }
 .rounded-circle {
   border: 5px solid green;
