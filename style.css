@@ -15,15 +15,6 @@
   padding-top: 6rem;
   background-color: rgba(92, 204, 64, 0.623);
 }
-.jumbotron svg {
-  height: calc(50ch - 8vmax);
-}
-#about svg {
-  height: calc(50ch - 8vmax);
-}
-#projects svg {
-  height: calc(50ch - 8vmax);
-}
 .rounded-circle {
   border: 5px solid green;
   animation: atasKeBawah 1s ease forwards;
