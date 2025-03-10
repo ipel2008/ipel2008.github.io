@@ -194,9 +194,12 @@
         btn_Kirim.classList.toggle("d-none");
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
+            //tampilkan tombol submit,hilangkan tombol loading
             btn_Loading.classList.toggle("d-none");
             btn_Kirim.classList.toggle("d-none");
+            //menampilkan alert jika pesan sudah berhasil terkirim
             Alert.classList.toggle("d-none");
+            //mereset isi form menjadi kosong kembali
             form.reset();
             console.log("Success!", response);
           })
