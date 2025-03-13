@@ -114,6 +114,38 @@
           </div>
         </div>
       </div>
+      <section id="My Keyboards">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Keyboards</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="keyboard-box">
+              <h3 class="keyboard-name">Keycrhron K2</h3>
+              <img src="img/keyboards/3.png" alt="" class="keyboard-img">
+              <a href="" class="btn btn-primary keyboard-detail-button">Show Detail</a>
+            </div>
+          </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h3 class="keyboard-name">Keycrhron K2</h3>
+                <img src="img/keyboards/2.png" alt="" class="keyboard-img">
+                <a href="" class="btn btn-primary keyboard-detail-button">Show Detail</a>
+              </div>
+            </div>
+              <div class="col-md-6 col-lg-4 mb-3">
+                <div class="keyboard-box">
+                  <h3 class="keyboard-name">Keycrhron K2</h3>
+                  <img src="img/keyboards/1.png" alt="" class="keyboard-img">
+                  <a href="" class="btn btn-primary keyboard-detail-button">Show Detail</a>
+                </div>
+            </div>
+        </div>
+      </div>
+        </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -123,72 +155,6 @@
       </svg>
     </section>
     <!-- Akhir-Projects -->
-    <section id="gallery">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Gallery</h2>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-md-3">
-              <a href="#">
-                <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-              </a>
-              </div>
-              <div class="col-md-3">
-                <a href="#">
-                  <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                </a>
-                </div>
-                <div class="col-md-3">
-                  <a href="#">
-                    <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                  </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                    </a>
-                    </div>
-                    <div class="col-md-3">
-                      <a href="#">
-                        <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                      </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#">
-                          <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                        </a>
-                        </div>
-                        <div class="col-md-3">
-                          <a href="#">
-                            <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                          </a>
-                          </div>
-                          <div class="col-md-3">
-                            <a href="#">
-                              <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                            </a>
-                            </div>
-                            <div class="col-md-3">
-                              <a href="#">
-                                <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                              </a>
-                              </div>
-                              <div class="col-md-3">
-                                <a href="#">
-                                  <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                                </a>
-                                </div>
-                                <div class="col-md-3">
-                                  <a href="#">
-                                    <img src="img/gallery/images (1).jpg" alt="img-fluid" class="img-fluid gallery-img">
-                                  </a>
-                                  </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- Contact -->
     <section id="Contact">
       <div class="row text-center">
@@ -224,6 +190,8 @@
           </form>
         </div>
       </div>
+      
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffc107"
@@ -298,5 +266,15 @@
   gsap.from('.display-4', {duration:1.5, x:-100, opacity:0, delay:.5, ease:'back',delay:1.5});
 </script>
     <!-- Akhir GSAP Script -->
+    <!-- Script Tilt-min-JS -->
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+        max: 20,
+        speed: 400,
+        glare:true,
+        maxGlare:0.7
+      });
+    </script>
   </body>
 </html>

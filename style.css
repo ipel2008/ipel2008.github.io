@@ -15,3 +15,87 @@
 #gallery .row > * {
   padding: 0;
 }
+/* My Keyboard Section */
+.keyboard-box{
+  position: relative;
+  background-color: #ffcd39;
+  border-radius: 10px;
+  height: 500px;
+  max-width: 500px;
+  transform-style: preserve-3d;
+}
+
+.keyboard-box:before{
+  content: 'MY';
+  position: absolute;
+  color: white;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%,0);
+  opacity: 0;
+  transition: .5s;
+}
+.keyboard-box:hover::before{
+  opacity: .3;
+}
+.keyboard-box:after{
+  content: 'KEYBOARD';
+  position: absolute;
+  color: white;
+  font-size: 4.5em;
+  font-weight: bold;
+  font-style: italic;
+  bottom: 60px;
+  right: 50%;
+  transform: translate(50%,0);
+  margin-top: 40%;
+  transform: translate(50%,0);
+  opacity: 0;
+  transition: .5s;
+}
+.keyboard-box:hover::after{
+  opacity: .3;
+}
+.keyboard-name{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  opacity: 0;
+  transition: .5s;
+  transform: translate3d(0,0,50px);
+}
+.keyboard-box:hover .keyboard-name{
+  top: 20px;
+  opacity: 1;
+  transform: translate3d(0,0,100px);
+}
+.keyboard-detail-button{
+  position: absolute;
+  bottom: 0;
+  left: 38%;
+  opacity: 0;
+  transition: .5s;
+  transform: translate3d(0,0,100px);
+}
+.keyboard-box:hover .keyboard-detail-button{
+  bottom:10px;
+  left: 38%;
+  opacity: 1;
+}
+.keyboard-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-49%,-47%,100px);
+  max-width: 350px;
+  transition: .5s;
+}
+.keyboard-box:hover .keyboard-img{
+  transform: translate3d(-54%,-47%,80px) rotate(15deg) scale(1.2);
+}
