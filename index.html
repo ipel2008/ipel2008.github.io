@@ -45,7 +45,7 @@
 
     <!-- jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/doom.jpg.jpg" alt="doom" width="340px" class="rounded-circle profile"/>
+      <img src="img/doom.jpg.jpg" alt="doom" width="340px" class="rounded-circle"/>
       <h1 class="display-4">Ipel</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -169,6 +169,10 @@
             <strong>Terima kasih!</strong> Pesan anda sudah saya terima.<i class="bi bi-emoji-smile"></i>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
+          <div class="alert alert-danger alert-dismissible fade show d-none failed-alert" role="alert">
+              <strong>Maaf!</strong> Pesan anda gagal kami terima<i class="bi bi-emoji-frown"></i>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
           <form name="Ipel-Contact-Form">
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
@@ -189,10 +193,9 @@
               <span class="visually-hidden">Loading...</span>
             </button>
           </form>
-        </div>
       </div>
-      
-      </section>
+    </div>
+    </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffc107"
@@ -200,7 +203,6 @@
           d="M0,128L40,112C80,96,160,64,240,90.7C320,117,400,203,480,234.7C560,267,640,245,720,208C800,171,880,117,960,117.3C1040,117,1120,171,1200,186.7C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
         ></path>
       </svg>
-    </section>
     <!-- Akhir-Contact -->
 
     <!-- Footer -->
@@ -217,6 +219,7 @@
       const btn_Kirim = document.querySelector(".btn-kirim");
       const btn_Loading = document.querySelector(".btn-loading");
       const Alert = document.querySelector(".my-alert");
+      const fArt= document.querySelector(".failed-alert");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -236,7 +239,14 @@
             form.reset();
             console.log("Success!", response);
           })
-          .catch((error) => console.error("Error!", error.message));
+          .catch((error) => {
+            btn_Loading.classList.toggle("d-none");
+            btn_Kirim.classList.toggle("d-none");
+            fArt.classList.toggle("d-none");
+            gsap.from('.alert', {duration:.4, y:-100, opacity:0, ease:'power1'});
+            form.reset();
+            console.log(error);
+          });
       });
     </script>
     <!-- Akhir Google Script -->
@@ -267,8 +277,8 @@
   gsap.from('.navbar', {duration:1.5, y:"-100%", opacity:0, ease:'bounce'});
   gsap.from('.display-4', {duration:1.5, x:-100, opacity:0, delay:.5, ease:'back',delay:1.5});
 </script>
-    <!-- Akhir GSAP Script -->
-    <!-- Script Tilt-min-JS -->
+<!-- Akhir GSAP Script -->
+<!-- Script Tilt-min-JS -->
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
@@ -277,11 +287,11 @@
         glare:true,
         maxGlare:0.7
       });
-      VanillaTilt.init(document.querySelectorAll(".profile"), {
+      VanillaTilt.init(document.querySelector(".jumbotron img"), {
         max: 20,
         speed: 400,
         glare:true,
-        maxGlare:0.7
+        maxGlare:1
       });
     </script>
   </body>
