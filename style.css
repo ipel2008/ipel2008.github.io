@@ -9,13 +9,13 @@
 .jumbotron img{
   border: 5px solid rgba(92, 204, 64, 0.623);
 }
-#projects .card:after{
+/* #projects .card{
   transition: .3s;
 } 
 #projects .card:hover{
   transform: scale(1.1);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
-}
+} */
 /* My Keyboard Section */
 .keyboard-box{
   position: relative;

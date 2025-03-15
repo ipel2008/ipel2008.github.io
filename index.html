@@ -253,14 +253,6 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      const galleryImage=document.querySelectorAll(".gallery-img");
-      galleryImage.forEach((img,i) => {
-        img.dataset.aos = 'flip-up';
-        img.dataset.aosDelay = i*50;
-        img.dataset.aosDuration= 1000;
-      });
-    </script>
-    <script>
       AOS.init({
         once: true,
       });
@@ -280,7 +272,7 @@
 <!-- Akhir GSAP Script -->
 <!-- Script Tilt-min-JS -->
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
-    <script type="text/javascript">
+    <script>
       VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
         max: 20,
         speed: 400,
