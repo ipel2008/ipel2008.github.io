@@ -45,7 +45,7 @@
 
     <!-- jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/doom.jpg.jpg" alt="doom" width="340px" class="rounded-circle"/>
+      <img src="img/doom.jpg.jpg" alt="doom" width="340px" class="rounded-circle profile"/>
       <h1 class="display-4">Ipel</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -59,7 +59,7 @@
     <!-- Akhir-jumbotron -->
 
     <!-- About -->
-    <section id="about">
+    <section id="about text-center">
       <div class="container" data-aos="fade-in" data-aos-offset="300">
         <div class="row text-center mb-3">
           <div class="col">
@@ -144,15 +144,16 @@
                 </div>
             </div>
         </div>
-      </div>
-        </section>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,128L40,138.7C80,149,160,171,240,154.7C320,139,400,85,480,85.3C560,85,640,139,720,176C800,213,880,235,960,245.3C1040,256,1120,256,1200,245.3C1280,235,1360,213,1400,202.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#ffffff"
+        fill-opacity="1"
+        d="M0,128L40,138.7C80,149,160,171,240,154.7C320,139,400,85,480,85.3C560,85,640,139,720,176C800,213,880,235,960,245.3C1040,256,1120,256,1200,245.3C1280,235,1360,213,1400,202.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+      ></path>
       </svg>
+  </div>
+  </section>
     </section>
     <!-- Akhir-Projects -->
     <!-- Contact -->
@@ -204,7 +205,7 @@
 
     <!-- Footer -->
     <footer class="bg-warning text-white text-center pb-5">
-      <p>Created With F*cking <i class="bi bi-arrow-through-heart-fill"></i> <a href="https://www.instagram.com/marvell2496/?next=%2F" class="text-white fw-bold">Ipel-2008</a></p>
+      <p>Created With F*cking <i class="bi bi-arrow-through-heart-fill"></i> <a href="https://www.instagram.com/ipel2008/" class="text-white fw-bold">Ipel-2008</a></p>
     </footer>
     <!-- Akhir-Footer -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -230,6 +231,7 @@
             btn_Kirim.classList.toggle("d-none");
             //menampilkan alert jika pesan sudah berhasil terkirim
             Alert.classList.toggle("d-none");
+            gsap.from('.alert', {duration:.4, y:-100, opacity:0, ease:'power1'});
             //mereset isi form menjadi kosong kembali
             form.reset();
             console.log("Success!", response);
@@ -270,6 +272,12 @@
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+        max: 20,
+        speed: 400,
+        glare:true,
+        maxGlare:0.7
+      });
+      VanillaTilt.init(document.querySelectorAll(".profile"), {
         max: 20,
         speed: 400,
         glare:true,

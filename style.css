@@ -9,11 +9,12 @@
 .jumbotron img{
   border: 5px solid rgba(92, 204, 64, 0.623);
 }
-.gallery-img{
-  width: 100%;
-}
-#gallery .row > * {
-  padding: 0;
+#projects .card:after{
+  transition: .3s;
+} 
+#projects .card:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
 }
 /* My Keyboard Section */
 .keyboard-box{
@@ -24,7 +25,6 @@
   max-width: 500px;
   transform-style: preserve-3d;
 }
-
 .keyboard-box:before{
   content: 'MY';
   position: absolute;
